@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AI Reply Assistant</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        width: 320px;
+        padding: 16px;
+      }
+      textarea,
+      select,
+      button {
+        width: 100%;
+        margin-top: 8px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        padding: 8px;
+        font-size: 14px;
+      }
+      button {
+        background-color: #2563eb;
+        color: white;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #1d4ed8;
+      }
+      #replyBox {
+        margin-top: 10px;
+        background: #f1f5f9;
+        border-radius: 8px;
+        padding: 10px;
+        min-height: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>✉️ AI Email Reply</h3>
+    <textarea id="emailContent" rows="4" placeholder="Enter email text..."></textarea>
+    <select id="tone">
+      <option value="FORMAL">Formal</option>
+      <option value="CASUAL">Casual</option>
+      <option value="FRIENDLY">Friendly</option>
+      <option value="CONCISE">Concise</option>
+      <option value="PROFESSIONAL">Professional</option>
+    </select>
+    <button id="generate">Generate Reply</button>
+
+    <div id="replyBox">AI reply will appear here...</div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "AI Email Reply Assistant",
+  "description": "Generate AI-powered replies inside Gmail using your Spring Boot + GraphQL service.",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["http://localhost:8080/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
